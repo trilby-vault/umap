@@ -17,7 +17,7 @@ ENV PYTHONUNBUFFERED=1 \
 RUN mkdir -p /srv/umap/data && \
     mkdir -p /srv/umap/uploads
 
-RUN mkdir /usr/share/man/man1
+# RUN mkdir /usr/share/man/man1
 
 COPY . /srv/umap
 
