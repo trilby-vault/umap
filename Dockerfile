@@ -43,9 +43,9 @@ RUN apt-get update && \
         zlib1g-dev \
         libfreetype6-dev \
         liblcms2-dev \
-        libwebp-dev \
-        && \
-    pip install --no-cache -r requirements-docker.txt && pip install . && \
+        libwebp-dev 
+        
+RUN pip install --no-cache -r requirements-docker.txt && pip install . && \
     apt-get remove -y \
         binutils \
         libproj-dev \
@@ -55,9 +55,9 @@ RUN apt-get update && \
         zlib1g-dev \
         libfreetype6-dev \
         liblcms2-dev \
-        libwebp-dev \
-        && \
-    apt-get autoremove -y && \
+        libwebp-dev
+        
+RUN apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
